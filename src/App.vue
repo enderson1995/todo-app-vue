@@ -1,7 +1,8 @@
 <template>
-    <div id="app" class="bg-gray-100 h-screen">
+    <div id="app" class="bg-gray-300 h-screen">
         <TodoList/>
     </div>
+
 </template>
 
 <script>
@@ -11,6 +12,11 @@ export default {
     name: 'app',
     components: {
         TodoList
+    },
+    methods: {
+    consoleClick() {
+      console.log('Button clicked')
     }
+  }
 }
 </script>
