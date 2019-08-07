@@ -1,7 +1,7 @@
 <template>
     <div id="action">
         <button @click="incrementValue" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            boton
+            boton {{text}}
         </button>
         <p>{{counter}}</p>
     </div>
@@ -16,7 +16,8 @@ export default {
 
     data () {
         return {
-            counter:0
+            counter:0,
+            text: 'hola'
         }       
     },
 

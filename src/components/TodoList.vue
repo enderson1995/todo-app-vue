@@ -6,16 +6,22 @@
             Todo List
         </todo-card>
        
-        <todo-card class="mx-auto mt-16 w-full max-w-lg">
-            Create/Edit Task
-
-            <todo-button class="mx-1 mt-16 w-full max-w-lg"></todo-button>
+        <todo-card class="mx-auto mt-16 w-full max-w-lg" >
+            Create/Edit Task 
+            <todo-task class="mx-auto mt-16  w-full max-w-lg" ></todo-task>       
         </todo-card>
+        
+        
     </div>
 </template>
 
 <script>
+
+
 export default {
+    components:{
+    
+    },
     props: {
 
     },
