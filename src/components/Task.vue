@@ -1,12 +1,11 @@
 <template>
     <div>
         <h1 class="text-red-400">Task IS : {{text}}</h1>
-        <button @click="incrementValue" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            boton 
-        </button>
+            <button @click="incrementValue" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Crear 
+            </button>
         <p>{{counter}}</p>
-        <input v-model="message" placeholder="new task" >
-        <p>Message is: {{ message }}</p>
+        <input v-model="message" placeholder="new task" class="bg-gray-500 ">
     </div>
 </template>
 
@@ -21,8 +20,14 @@ export default {
         return {
             counter:0,
             text: 'hola',
-            message: ''
-        }       
+            message: '',
+            task:[{
+                id:0,
+                description:'',
+                done:false
+            }],
+        }   
+
     },
 
     mounted () {
@@ -32,7 +37,15 @@ export default {
     methods: {
         incrementValue () {
             this.text=this.message,
-            this.$emit('message')
+            this.counter++,
+            this.$emit('messages',this.message),
+            this.task.push({
+                id:this.counter,
+                description:this.message,
+                done:false
+            }),
+        
+            this.message=null
         } 
     }   
 }
