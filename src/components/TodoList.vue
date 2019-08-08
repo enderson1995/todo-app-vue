@@ -5,8 +5,8 @@
         <todo-card class="mx-auto mt-4 h-16 w-full max-w-lg">
             <div v-for="(tasktest, index) in tasks" :key="tasktest.id" >
                 <!-- mostrar data -->
-                <input type="checkbox">
-                <p v-show="!tasktest.editing">{{index +1}}-){{tasktest.title}}</p>
+                <input type="checkbox" v-model="checked" @click="tasktest.done=checked">
+                <p v-show="!tasktest.editing">{{index +1}}-) {{tasktest.title}}  {{checked}}</p>
                 <input v-model="tasktest.title" v-show="tasktest.editing" @keydown.enter="tasktest.editing=false">
                 
                 <!-- boton de borrar -->
@@ -38,13 +38,12 @@ export default {
     
     },
     props: {
-
+        
     },
 
     data () {
-        return {   
-            a:'',
-            
+        return { 
+            checked: false,         
             tasks: [
                 {
                     id: 1,
