@@ -6,33 +6,30 @@
         <input type="text" class="todo-input text-center" placeholder="What's next?">
         Todo list goes here
     </div>
+        <div>
         <todo-card class="inline-block mx-10 mt-10 h-48 w-40 max-w-lg bg-red-500">
             Critical
         </todo-card>
         <todo-card class="inline-block mx-10 mt-10 h-48 w-full max-w-lg bg-red-100">
             Tarea
         </todo-card>
-        <todo-card class="inline-block mx-10 mt-10 h-48 w-auto max-w-lg bg-red-100">
-            BOTONES
-        </todo-card>
+        </div>
+        <div>
         <todo-card class="inline-block mx-10 mt-10 h-48 w-40 max-w-lg bg-indigo-700">
             Major
         </todo-card>
         <todo-card class="inline-block mx-10 mt-10 h-48 w-full max-w-lg bg-red-100">
             Tarea
         </todo-card>
-        <todo-card class="inline-block mx-10 mt-10 h-48 w-auto max-w-lg bg-red-100">
-            BOTONES
-        </todo-card>
+        </div>
+        <div>
         <todo-card class="inline-block mx-10 mt-10 h-48 w-40 max-w-lg bg-yellow-400">
             Minor
         </todo-card>
         <todo-card class="inline-block mx-10 mt-10 h-48 w-full max-w-lg bg-red-100">
             Tarea
         </todo-card>
-        <todo-card class="inline-block mx-10 mt-10 h-48 w-auto max-w-lg bg-red-100">
-            BOTONES
-        </todo-card>
+        </div>
     </div>        
     </div>
 
