@@ -3,9 +3,10 @@
         <h1 class="font-hairline text-6xl text-center text-gray-200">Todo App </h1>
 
         <todo-card class="mx-auto mt-4 h-16 w-full max-w-lg">
-            <div v-for="tasktest in tasks" :key="tasktest.id" >
+            <div v-for="(tasktest, index) in tasks" :key="tasktest.id" >
                 <!-- mostrar data -->
-                <p v-show="!tasktest.editing">{{tasktest.title}}</p>
+                <input type="checkbox">
+                <p v-show="!tasktest.editing">{{index +1}}-){{tasktest.title}}</p>
                 <input v-model="tasktest.title" v-show="tasktest.editing" @keydown.enter="tasktest.editing=false">
                 
                 <!-- boton de borrar -->
