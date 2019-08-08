@@ -12,11 +12,6 @@ export default {
     name: 'app',
     components: {
         TodoList
-    },
-    methods: {
-    consoleClick() {
-      console.log('Button clicked')
     }
-  }
 }
 </script>

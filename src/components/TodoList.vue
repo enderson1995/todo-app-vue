@@ -5,18 +5,15 @@
         <todo-card class="mx-auto mt-4 h-16 w-full max-w-lg">
             <div v-for="tasktest in tasks" :key="tasktest.id" >
                 <!-- mostrar data -->
-                <p v-if="!editing">
-                es la tarea {{tasktest.id}} se hace {{tasktest.description}},esta:{{tasktest.done}}
-                </P>
-                <p v-else>
-                    <input @keydown.enter="addTodo(tasktest.id)" v-model="edicion" placeholder="edit task" class="bg-gray-500 ">
-                </p>
+                <p v-show="!tasktest.editing">{{tasktest.title}}</p>
+                <input v-model="tasktest.title" v-show="tasktest.editing" @keydown.enter="tasktest.editing=false">
+                
                 <!-- boton de borrar -->
                 <button @click="borrar(tasktest.id)" class="bg-red-700 hover:bg-red-200 text-white font-bold py-2 px-4 rounded">
                     X
                 </button>
                 <!-- boton de editar -->
-                <button @click="editar(tasktest.id)" class="mx-auto mt-2 bg-green-700 hover:bg-green-200 text-white font-bold py-2 px-4 rounded">
+                <button @click="tasktest.editing=true" class="mx-auto mt-2 bg-green-700 hover:bg-green-200 text-white font-bold py-2 px-4 rounded">
                     edit
                 </button>
             </div>
@@ -44,14 +41,15 @@ export default {
     },
 
     data () {
-        return {
+        return {   
+            a:'',
             
             tasks: [
                 {
                     id: 1,
                     title: 'Example task',
                     done: false,
-                    editing:false,
+                    editing:false
                 }                
             ],
             mess: '',
@@ -69,18 +67,19 @@ export default {
                 this.counter++  
                 this.tasks.push({
                     id:this.counter,
-                    description:message,
-                    done:false
+                    title:message,
+                    done:false,
+                    editing:false
                 })           
             },
             borrar(idRemove){
                 this.tasks=this.tasks.filter(todo => {
-				    return todo.id !== idRemove
+                    return todo.id !== idRemove
                 })   
             },
-            editar(idEdit){
-
-                } 
+            editar(){
+            tasktest.editing=true
+            return tasktest.editing
             }   
     }
 }
