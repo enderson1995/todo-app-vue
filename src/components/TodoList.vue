@@ -28,6 +28,11 @@
         
 <div class="container mx-auto px-4 py-20 flex flex-col flex-wrap">
         <h1 class="font-hairline text-6xl text-center text-gray-500">Todo App Proyecto 1</h1>
+                <h1 class="font-hairline text-6xl text-center text-gray-500">Proyecto 1</h1>
+     <div>   
+        <input type="text" class="todo-input text-center" placeholder="What's next?">
+        Todo list goes here
+    </div>
     <div class="bg-gray-300">
         <todo-card class="inline-block mx-10 mt-10 h-48 w-40 max-w-lg bg-red-500">
             Critical
