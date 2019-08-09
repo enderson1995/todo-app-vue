@@ -34,16 +34,8 @@ export default {
     },
 
     methods: {
-        incrementValue () {
-            this.text=this.message,
-            this.counter++,
-            this.$emit('messages',this.message),
-            this.task.push({
-                id:this.counter,
-                description:this.message,
-                done:false
-            }),
-        
+        incrementValue () {         
+            this.$emit('messages',this.message),       
             this.message=null
         } 
     }   
