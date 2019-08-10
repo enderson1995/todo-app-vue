@@ -1,18 +1,22 @@
 <template>
     <div class="container mx-auto px-4 py-20 flex flex-col flex-wrap">
-        <h1 class="font-hairline text-6xl text-center text-gray-200">Todo App </h1>
+        <div>
+        <h1 class="font-hairline text-5xl text-center text-gray-200">Hello! :)</h1>
+    </div>
+    <!-- otro componente -->
+       <p class="font-hairline text-center text-2xl text-gray-200">Create a new task </p>
+        <todo-task class="mx-auto mt-6 w-f100 max-w-lg bg-white rounded  " @messages='recive' ></todo-task>       
 
-        <todo-card class="mx-auto mt-16 w-full max-w-lg">
+         
+        <h1 class="font-hairline mt-6 text-5xl text-center text-gray-200">To do List </h1>
+    
+        <todo-card class="mx-auto mt-2 w-full max-w-lg text-gray-600">
            
             <todo-tasksList :tasks='tasks' @eraser='eraser'>
-          
-        </todo-tasksList>           
+             </todo-tasksList>           
         </todo-card>
-       <!-- otro componente -->
-        <todo-card class="mx-auto mt-16 w-full max-w-lg" >
-            Create/Edit Task 
-        <todo-task class="mx-auto mt-16  w-full max-w-lg" @messages='recive' ></todo-task>       
-        </todo-card>
+       
+       
     </div>
 </template>
 
